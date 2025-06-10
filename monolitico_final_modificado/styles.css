@@ -1,0 +1,70 @@
+
+:root {
+  --bg: #121212;
+  --fg: #e0e0e0;
+  --accent: #00ff99;
+  --danger: #ff355e;
+  --highlight: #ffcc00;
+  --border: #444;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: var(--bg);
+  color: var(--fg);
+  margin: 0;
+  padding: 2rem;
+}
+
+.container {
+  background-color: #1e1e1e;
+  border: 2px dashed var(--border);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition: background-color 0.4s ease;
+}
+
+.container:hover {
+  background-color: #2a2a2a;
+}
+
+h1, h2, h3 {
+  color: var(--highlight);
+  text-shadow: 1px 1px 0 var(--border);
+}
+
+button {
+  background-color: transparent;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--accent);
+  color: #000;
+}
+
+input[type="text"],
+input[type="password"] {
+  background: #222;
+  border: 1px solid var(--border);
+  color: var(--fg);
+  padding: 0.5rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+input:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+.auth-section, .task-section {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-top: 1px solid var(--border);
+}

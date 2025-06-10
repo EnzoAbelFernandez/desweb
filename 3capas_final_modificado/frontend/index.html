@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas (3 Capas)</title>
+    <link rel="stylesheet" href="styles_modificado.css">
+</head>
+<body>
+        <div id="authSection">
+        <h2>Registro/Inicio de Sesión</h2>
+        <input type="text" id="username" placeholder="Usuario">
+        <input type="password" id="password" placeholder="Contraseña">
+        <button onclick="register()">Registrarse</button>
+        <button onclick="login()">Iniciar Sesión</button>
+        </div>
+        
+        <div class="task-section" id="taskSection" style="display: none;">
+        <button id="logoutButton" onclick="logout()" style="display: none;">Cerrar Sesión</button>
+
+            <h2>Mis Tareas</h2>
+            <div class="task-input-group">
+                <input type="text" id="newTask" placeholder="Nueva tarea">
+                <input type="datetime-local" id="taskDateTime">
+                <button class="btn-primary" onclick="addTask()">Agregar</button>
+            </div>
+            <ul id="taskList"></ul>
+        </div>
+    </div>
+    
+    <script src="app_modificado.js"></script>
+</body>
+</html>

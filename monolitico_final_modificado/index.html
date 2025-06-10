@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas Monolítico</title>
+    <link rel="stylesheet" href="styles_modificado.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestor de Tareas</h1>
+        
+        <div class="auth-section">
+            <h2>Registro/Inicio de Sesión</h2>
+            <input type="text" id="username" placeholder="Usuario">
+            <input type="password" id="password" placeholder="Contraseña">
+            <div class="button-group">
+                <button class="btn-primary" onclick="register()">Registrarse</button>
+                <button class="btn-success" onclick="login()">Iniciar Sesión</button>
+            </div>
+        </div>
+        
+        <div class="task-section" id="taskSection" style="display: none;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h2>Mis Tareas</h2>
+            <button class="btn-danger" onclick="logout()">Cerrar sesión</button>
+        </div>
+        <div class="task-input-group">
+            <input type="text" id="newTask" placeholder="Nueva tarea">
+            <input type="datetime-local" id="taskDateTime">
+            <button class="btn-primary" onclick="addTask()">Agregar</button>
+        </div>
+        <ul id="taskList"></ul>
+        </div>
+
+        </div>
+    
+    <script src="app_modificado.js"></script>
+</body>
+</html>
